@@ -19,7 +19,7 @@ class THU4Over6Settings(QtWidgets.QDialog, Ui_THU4Over6Settings):
         self.setupUi(self)
 
         settings = QtCore.QSettings()
-        self.sudoCommandEdit.setText(settings.value("sudo_command") or "kdesu")
+        self.sudoCommandEdit.setText(settings.value("sudo_command") or "sudo")
         self.sudoCheckBox.setChecked(settings.value("use_sudo", True, type=bool))
         self.warningCheckBox.setChecked(settings.value("show_warning", False, type=bool))
 
@@ -67,7 +67,7 @@ class THU4Over6LogViewer(QtWidgets.QDialog, Ui_THU4Over6LogViewer):
         if settings.value("use_sudo", type=bool):
             cmdline.append(settings.value("sudo_command") or "sudo")
         cmdline.extend([
-            "journalctl", "-b", "-u",
+            "journalctl", "-b", "--no-pager", "-u",
             "{}@{}".format(settings.value("service_name"), settings.value("vpn_name"))
         ])
         try:
