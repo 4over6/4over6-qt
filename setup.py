@@ -36,7 +36,7 @@ setup(
     ],
     entry_points={
         "gui_scripts": [
-            "thu4over6=thu4over6.__main__:main",
+            "4over6-qt=thu4over6.__main__:main",
         ],
     },
     classifiers=[

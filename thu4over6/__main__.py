@@ -77,11 +77,9 @@ class THU4Over6LogViewer(QtWidgets.QDialog, Ui_THU4Over6LogViewer):
         return output
 
     def getip(self):
-        """Get external IP address and hostname"""
+        """Get tunnel IP address and hostname"""
         try:
-            content = urllib.request.urlopen("http://myip.ipip.net/").read()
-            reg = re.compile('\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}')
-            ip = reg.search(content).group(1)
+            ip = os.popen('ip addr show 4over6').read().split("inet ")[1].split("/")[0]
         except:
             ip = ""
 
