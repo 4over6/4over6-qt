@@ -14,7 +14,7 @@ except ImportError:
 
 
 setup(
-    name="4over6-qt",
+    name="thu4over6",
     version=__version__,
     description="Client GUI for a custom 4over6 tunnel",
     long_description=open('README.rst').read(),
@@ -22,9 +22,9 @@ setup(
     author_email="gaoyichuan000@gmail.com",
     url="https://github.com/4over6/4over6-qt",
     license="GNU GPLv3",
-    packages=["4over6-qt"],
+    packages=["thu4over6"],
     package_data={
-        "4over6-qt": [
+        "thu4over6": [
             "4over6.png",
             "4over6_disabled.png",
             "*.ui",
@@ -36,7 +36,7 @@ setup(
     ],
     entry_points={
         "gui_scripts": [
-            "4over6-qt=thu4over6.__main__:main",
+            "thu4over6=thu4over6.__main__:main",
         ],
     },
     classifiers=[
@@ -52,7 +52,7 @@ setup(
     ],
     options={
         'build_qt': {
-            'packages': ['4over6-qt'],
+            'packages': ['thu4over6'],
         },
     },
     cmdclass=setup_cmdclass,
