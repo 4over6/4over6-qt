@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Name=THU 4over6 Tunnel
+GenericName=4over6 Tunnel
+Comment=Client GUI for a custom 4over6 tunnel
+Exec=4over6-qt
+Icon=4over6.png
+StartupNotify=false
+Terminal=false
+Type=Application
+Categories=Qt;Network;

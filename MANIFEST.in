@@ -1,0 +1,4 @@
+include LICENSE
+include README.rst
+include 4over6-qt.desktop
+include 4over6.png
